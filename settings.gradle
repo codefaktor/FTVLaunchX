@@ -1,0 +1,5 @@
+// Top-level build settings.
+
+include ':app'
+
+rootProject.name = 'FTVLaunchX'
