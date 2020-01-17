@@ -12,6 +12,10 @@ package de.codefaktor.ftvlaunchx;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,6 +36,12 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 
 	private Spinner appsSpinner;
 	private AppsAdapter appsAdapter;
+
+	private void OpenHelpInBrowser() {
+		Intent help = new Intent(Intent.ACTION_VIEW,
+								 Uri.parse(getString(R.string.url_help)));
+		startActivity(help);
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +64,26 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 
 		String launcherPackage = Preferences.getLauncherPackage(this);
 		appsSpinner.setSelection(appsAdapter.getPosition(launcherPackage));
+
+		if (!Utilities.hasPermission(this, "WRITE_SECURE_SETTINGS")) {
+			new AlertDialog.Builder(this)
+				.setTitle(R.string.alert_title)
+				.setMessage(R.string.alert_text)
+				.setCancelable(true)
+				.setNegativeButton(R.string.btn_help,
+								   new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						OpenHelpInBrowser();
+					}
+				})
+				.setPositiveButton(R.string.btn_okay,
+								   new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+					}
+				}).create().show();
+		}
 	}
 
 	@Override
