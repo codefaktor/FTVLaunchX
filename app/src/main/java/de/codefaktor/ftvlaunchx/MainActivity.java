@@ -57,6 +57,19 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 	}
 
 	@Override
+	protected void onResume() {
+		super.onResume();
+
+		TextView tvStatus = (TextView) findViewById(R.id.tvStatus);
+
+		if (!Utilities.hasPermission(this, "WRITE_SECURE_SETTINGS")) {
+			tvStatus.setVisibility(View.VISIBLE);
+		} else {
+			tvStatus.setVisibility(View.INVISIBLE);
+		}
+	}
+
+	@Override
 	protected void onDestroy() {
 		super.onDestroy();
 	}

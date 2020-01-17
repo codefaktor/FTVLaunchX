@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">LaunchX</string>
+	<string name="service_status">Service disabled due to missing
+		WRITE_SECURE_SETTINGS permission!</string>
 </resources>
