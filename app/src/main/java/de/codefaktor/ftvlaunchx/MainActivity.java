@@ -40,7 +40,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 
 		setContentView(R.layout.activity_main);
 
-		TextView tvTitle = findViewById(R.id.tvTitle);
+		TextView tvTitle = (TextView) findViewById(R.id.tvTitle);
 
 		tvTitle.setText(getString(R.string.app_name) + " " +
 						getString(R.string.app_version));
