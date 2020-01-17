@@ -25,6 +25,23 @@ import de.codefaktor.ftvlaunchx.models.AppInfo;
 
 public class Utilities {
 	/*
+	 * Determines whether the given permission has been granted.
+	 *
+	 * @param ctx        Context of application.
+	 * @param permission The permission to check for.
+	 * @return           True if the given permission has been granted,
+	 *                   false otherwise.
+	 */
+
+	public static boolean hasPermission(Context ctx, String permission) {
+		int result = ctx.checkCallingOrSelfPermission(
+			"android.permission." + permission
+		);
+
+		return (result == PackageManager.PERMISSION_GRANTED);
+	}
+
+	/*
 	 * Gets all installed non-system applications.
 	 *
 	 * @param ctx Context of application.
