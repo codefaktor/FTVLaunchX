@@ -36,7 +36,6 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Log.d(TAG, "onCreate()");
 
 		setContentView(R.layout.activity_main);
 
@@ -60,7 +59,6 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		Log.d(TAG, "onDestroy()");
 	}
 
 	@Override
