@@ -12,6 +12,7 @@ package de.codefaktor.ftvlaunchx;
 import android.accessibilityservice.AccessibilityService;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.KeyEvent;
@@ -84,6 +85,15 @@ public class HomeService extends AccessibilityService {
 
 	@Override
 	protected void onServiceConnected() {
+		Log.i(TAG, "System did connect accessibility service...");
+
+		final IntentFilter filter = new IntentFilter();
+
+		filter.addAction(Intent.ACTION_SCREEN_ON);
+
+		homeReceiver = new HomeReceiver();
+
+		getApplicationContext().registerReceiver(homeReceiver, filter);
 	}
 
 	// Called when the system is about to shutdown this accessibility
@@ -91,5 +101,12 @@ public class HomeService extends AccessibilityService {
 
 	@Override
 	public boolean onUnbind(Intent intent) {
+		Log.i(TAG, "System did unbind from accessibility service...");
+
+		getApplicationContext().unregisterReceiver(homeReceiver);
+
+		homeReceiver = null;
+
+		return false;
 	}
 }
