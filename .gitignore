@@ -1,6 +1,7 @@
 /.idea/
 /build/
 /captures/
+/keystore.properties
 /local.properties
 .cxx
 .externalNativeBuild
