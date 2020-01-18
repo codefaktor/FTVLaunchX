@@ -16,6 +16,9 @@
 		android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
 
 	<uses-permission
+		android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+	<uses-permission
 		android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
 	<uses-permission
@@ -39,6 +42,14 @@
 					android:name="android.intent.category.LEANBACK_LAUNCHER" />
 			</intent-filter>
 		</activity>
+
+		<receiver
+			android:name=".HomeReceiver"
+			android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
 
 		<service
 			android:name=".HomeService"
