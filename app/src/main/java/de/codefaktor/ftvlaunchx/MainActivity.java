@@ -18,6 +18,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -41,6 +42,25 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		Intent help = new Intent(Intent.ACTION_VIEW,
 								 Uri.parse(getString(R.string.url_help)));
 		startActivity(help);
+	}
+
+	private void UpdateServiceSettings() {
+		TextView tvStatus = (TextView) findViewById(R.id.tvStatus);
+
+		if (!Utilities.hasPermission(this, "WRITE_SECURE_SETTINGS")) {
+			tvStatus.setVisibility(View.VISIBLE);
+		} else {
+			tvStatus.setVisibility(View.INVISIBLE);
+
+			String packageName = getPackageName();
+
+			Settings.Secure.putString(getContentResolver(),
+				Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES,
+				packageName + "/" + packageName + ".HomeService");
+
+			Settings.Secure.putString(getContentResolver(),
+				Settings.Secure.ACCESSIBILITY_ENABLED, "1");
+		}
 	}
 
 	@Override
@@ -81,6 +101,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 								   new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
+						UpdateServiceSettings();
 					}
 				}).create().show();
 		}
@@ -89,14 +110,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 	@Override
 	protected void onResume() {
 		super.onResume();
-
-		TextView tvStatus = (TextView) findViewById(R.id.tvStatus);
-
-		if (!Utilities.hasPermission(this, "WRITE_SECURE_SETTINGS")) {
-			tvStatus.setVisibility(View.VISIBLE);
-		} else {
-			tvStatus.setVisibility(View.INVISIBLE);
-		}
+		UpdateServiceSettings();
 	}
 
 	@Override
