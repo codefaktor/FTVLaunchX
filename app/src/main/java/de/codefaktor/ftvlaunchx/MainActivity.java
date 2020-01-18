@@ -17,7 +17,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.provider.Settings;
 import android.view.View;
 import android.widget.AdapterView;
@@ -33,8 +32,6 @@ import de.codefaktor.ftvlaunchx.ui.AppsAdapter;
  */
 
 public class MainActivity extends Activity implements OnItemSelectedListener {
-	private static final String TAG = "MainActivity";
-
 	private Spinner appsSpinner;
 	private AppsAdapter appsAdapter;
 
