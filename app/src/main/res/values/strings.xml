@@ -9,6 +9,6 @@
 	<string name="service_status">Service disabled due to missing
 		WRITE_SECURE_SETTINGS permission!</string>
 	<string name="url_help">
-		https://github.com/codefaktor/FTVLaunchX/blob/master/README.md#permissions
+		https://github.com/codefaktor/FTVLaunchX/blob/master/README.md#Setup
 	</string>
 </resources>
