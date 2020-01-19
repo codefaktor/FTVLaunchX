@@ -8,15 +8,52 @@
 	tools:context=".MainActivity"
 	tools:deviceIds="tv">
 
-	<TextView
-		android:id="@+id/tvTitle"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="@string/app_name"
-		android:textAppearance="?android:attr/textAppearanceMedium"
+	<ImageView
+		android:id="@+id/ivLogo"
+		android:layout_width="96dp"
+		android:layout_height="96dp"
+		android:layout_marginBottom="240dp"
+		android:contentDescription="@string/app_name"
+		android:src="@mipmap/ic_launcher"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toRightOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/tvTitle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="24dp"
+		android:text="@string/app_name"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+	<Spinner
+		android:id="@+id/sp_apps"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="32dp"
+		android:layout_marginRight="32dp"
+		android:layout_marginTop="24dp"
+		android:spinnerMode="dialog"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+	<TextView
+		android:id="@+id/tvStatus"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="64dp"
+		android:text="@string/service_status"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:textColor="@color/colorAccent"
+		android:visibility="invisible"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
