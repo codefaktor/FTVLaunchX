@@ -2,10 +2,10 @@
 
 apply plugin: 'com.android.application'
 
-def versionMajor = 0
+def versionMajor = 1
 def versionMinor = 0
-def versionPatch = 1
-def versionSuffix = "-dev"
+def versionPatch = 0
+def versionSuffix = ""
 
 def keystorePropertiesFile = rootProject.file('keystore.properties')
 def keystoreProperties = new Properties()
