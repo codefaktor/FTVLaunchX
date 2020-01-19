@@ -123,15 +123,15 @@ from a mobile phone running Android or a desktop PC.
     device when asked (see 6. in Pre-Requisites above)
 7.  When presented with a command-line within the `Remote ADB Shell`
     application, enter and run the following command:
-```
-pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
-```
+    ```
+    pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
+    ```
 8.  Open FTVLaunchX, select a launcher and press the home button – enjoy!
 
 ##### Method 2: via ADB from an Android phone
 
 1.  Use a browser to download the latest release of FTVLaunchX from the
-    [release page][GITHUB_ISSUES] to your phone
+    [release page][GITHUB_RELEASES] to your phone
 2.  Install the [Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools)
     application from Google Play on your phone
 3.  Install the [Remote ADB Shell](https://play.google.com/store/apps/details?id=com.cgutman.androidremotedebugger)
@@ -141,16 +141,16 @@ pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
 5.  Open `Remote ADB Shell`, connect to your Fire TV by using the IP address
     of your device (see 6. in Pre-Requisites above) and run the following
     command:
-```
-pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
-```
+    ```
+    pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
+    ```
 6.  Open FTVLaunchX on your Fire TV device, select a launcher and press the
     home button – enjoy!
 
 ##### Method 3: via ADB from a desktop PC or laptop
 
 1.  Use a browser to download the latest release of FTVLaunchX from the
-    [release page][GITHUB_ISSUES] to your computer
+    [release page][GITHUB_RELEASES] to your computer
 2.  Install `ADB` and connect to your Fire TV by using the IP address
     of your device (see 6. in Pre-Requisites above), see
     [here](https://developer.amazon.com/docs/fire-tv/connecting-adb-to-device.html)
@@ -159,18 +159,18 @@ pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
     following commands (make sure to use the actual name of the downloaded
     file):
     -   For devices running Fire OS 5 (Fire TV Stick 2nd Generation)
-```
-adb install FTVLaunchX-x.y.z.apk
-```
+    ```
+    adb install FTVLaunchX-x.y.z.apk
+    ```
     -   For devices running Fire OS 6 or 7 (Fire TV Stick 4K & Fire TV Cube)
-```
-adb install -g FTVLaunchX-x.y.z.apk
-```
-4.   If your device is not running Fire OS 6 or 7 then grant the required
-     permission by running, otherwise proceed to step 5:
-```
-adb pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
-```
+    ```
+    adb install -g FTVLaunchX-x.y.z.apk
+    ```
+4.  If your device is not running Fire OS 6 or 7 then grant the required
+    permission by running, otherwise proceed to step 5:
+    ```
+    adb pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
+    ```
 5.  Open FTVLaunchX on your Fire TV device, select a launcher and press the
     home button – enjoy!
 
