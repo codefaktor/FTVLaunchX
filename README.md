@@ -179,7 +179,11 @@ add the `-r` flag to the `adb install` commands in step 3.
 
 ### Usage
 
-Just start FTVLaunchX and select the application to use as your launcher.
+Just start FTVLaunchX and select the application to use as your launcher:
+
+<p align="center">
+    <img src="./gfx/Screenshot.jpg" width="640" height="360" />
+</p>
 
 From now on, every time you boot your device, wake it up from sleep or press
 the home button, you will be taken to this application.
@@ -193,6 +197,9 @@ of your Fire TV device, you will have to press and hold the menu and home
 buttons at the same time.
 
 You can also get to the default Amazon home screen by using this method.
+
+And, of course, you can also still use Alexa to get to the settings menu or
+the original Amazon home screen: just say "Home" or "Settings".
 
 Lean back & enjoy!
 
