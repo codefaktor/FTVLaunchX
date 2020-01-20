@@ -19,8 +19,13 @@ So far FTVLaunchX has been tested on:
 
 -   Fire TV Stick 2nd Generation (Fire OS 5.2.7.2)
 -   Fire TV Stick 4K (Fire OS 6.2.6.8)
+-   Nvidia Shield 2017 (Shield Android TV 8.0.1)
 
 Please let me know if you are using it successfully on any other devices.
+
+You can find me at the
+[official discussion thread](https://forum.xda-developers.com/fire-tv/general/ftvlaunchx-custom-launcher-root-t4037397)
+on XDA.
 
 ### Features
 
