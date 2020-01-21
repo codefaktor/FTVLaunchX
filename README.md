@@ -85,6 +85,15 @@ Documentation
 
 ### Setup
 
+#### Downloads
+
+All releases of FTVLaunchX can be downloaded as installable APKs from the
+[release page][GITHUB_RELEASES].
+
+If you are using [Aptoide TV](https://tv.aptoide.com/) on your Fire TV
+device you can also download it directly from
+[there](https://launchx.en.aptoide.com/).
+
 #### Quick Installation Overview
 
 FTVLaunchX needs the `WRITE_SECURE_SETTINGS` permission to enable an
