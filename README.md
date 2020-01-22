@@ -27,6 +27,15 @@ You can find me at the
 [official discussion thread](https://forum.xda-developers.com/fire-tv/general/ftvlaunchx-custom-launcher-root-t4037397)
 on XDA.
 
+**A word To Amazon:** we all understand that you want to display some ads,
+present your content and sell Amazon Prime but the current incarnation of the
+Fire TV home screen is just too bloated and barely usable by young children
+or elderly people.
+
+**Amazon, please, before trying to kill this project, think about giving us
+a way to customize and clean up the home screen – presenting 50 pieces of
+information on one screen is just not a good user experience! Thank you!**
+
 ### Features
 
 -   Reliably intercepts any & all presses of the home button.
