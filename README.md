@@ -17,8 +17,9 @@ and tries to overcome several issues relating to it.
 
 So far FTVLaunchX has been tested on:
 
--   Fire TV Stick 2nd Generation (Fire OS 5.2.7.2)
--   Fire TV Stick 4K (Fire OS 6.2.6.8)
+-   Fire TV Stick 2nd Generation (Fire OS 5.2.7.2, Android 5.1)
+-   Fire TV Stick 4K (Fire OS 6.2.6.8, Android 7.1)
+-   Fire TV Cube 2nd Generation (Fire OS 7.2.0.6, Android 9.0)
 -   Nvidia Shield 2017 (Shield Android TV 8.0.1)
 
 Please let me know if you are using it successfully on any other devices.
@@ -117,6 +118,14 @@ $ pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
 For a step-by-step guide and more information on how to connect to your
 Fire TV device via `ADB`, follow the detailed installation instructions below.
 
+**Note to users of Fire TV Cube 2nd Generation:** the `WRITE_SECURE_SETTINGS`
+permission seems to have been removed by Amazon; please manually enable the
+accessibility service of FTVLaunchX via the following two commands:
+```
+$ settings put secure enabled_accessibility_services de.codefaktor.ftvlaunchx/de.codefaktor.ftvlaunchx.HomeService
+$ settings put secure accessibility_enabled 1
+```
+
 #### Detailed Installation Instructions
 
 There are three ways to install FTVLaunchX: either directly on your Fire TV
@@ -149,6 +158,11 @@ from a mobile phone running Android or a desktop PC.
     ```
     pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
     ```
+    or on devices based on Fire OS 7 (e.g. Fire TV Cube 2nd Generation):
+    ```
+    settings put secure enabled_accessibility_services de.codefaktor.ftvlaunchx/de.codefaktor.ftvlaunchx.HomeService
+    settings put secure accessibility_enabled 1
+    ```
 8.  Open FTVLaunchX, select a launcher and press the home button – enjoy!
 
 ##### Method 2: via ADB from an Android phone
@@ -167,6 +181,11 @@ from a mobile phone running Android or a desktop PC.
     ```
     pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
     ```
+    or on devices based on Fire OS 7 (e.g. Fire TV Cube 2nd Generation):
+    ```
+    settings put secure enabled_accessibility_services de.codefaktor.ftvlaunchx/de.codefaktor.ftvlaunchx.HomeService
+    settings put secure accessibility_enabled 1
+    ```
 6.  Open FTVLaunchX on your Fire TV device, select a launcher and press the
     home button – enjoy!
 
@@ -181,20 +200,22 @@ from a mobile phone running Android or a desktop PC.
 3.  Install the downloaded release of FTVLaunchX by executing one of the
     following commands (make sure to use the actual name of the downloaded
     file):
-    -   For devices running Fire OS 5 (Fire TV Stick 2nd Generation)
+    -   For devices running Fire OS 5 (e.g. Fire TV Stick 2nd Generation)
     ```
     adb install FTVLaunchX-x.y.z.apk
+    adb pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
     ```
-    -   For devices running Fire OS 6 or 7 (Fire TV Stick 4K & Fire TV Cube)
+    -   For devices running Fire OS 6 (e.g. Fire TV Stick 4K)
     ```
     adb install -g FTVLaunchX-x.y.z.apk
     ```
-4.  If your device is not running Fire OS 6 or 7 then grant the required
-    permission by running, otherwise proceed to step 5:
+    -   For devices running Fire OS 7 (e.g. Fire TV Cube 2nd Generation)
     ```
-    adb pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
+    adb install FTVLaunchX-x.y.z.apk
+    adb shell settings put secure enabled_accessibility_services de.codefaktor.ftvlaunchx/de.codefaktor.ftvlaunchx.HomeService
+    adb shell settings put secure accessibility_enabled 1
     ```
-5.  Open FTVLaunchX on your Fire TV device, select a launcher and press the
+4.  Open FTVLaunchX on your Fire TV device, select a launcher and press the
     home button – enjoy!
 
 Note: if you are updating FTVLaunchX with this method then you will need to
