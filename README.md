@@ -69,12 +69,13 @@ to send in any feature requests.
 
 ### Donations
 
-FTVLaunchX is and will always be totally __free__ and __without ads__.
+FTVLaunchX is and will always be totally **free** and **without ads**.
 
 But if you want to say _Thank You_ and would like to support any further
-development then feel free to send me a buck via PayPal:
+development then feel free to send me a buck via PayPal or Bitcoin:
 
-[FTVLaunchX MoneyPool at PayPal](https://paypal.me/pools/c/8lNMBi7om0)
+-   [FTVLaunchX MoneyPool at PayPal](https://paypal.me/pools/c/8lNMBi7om0)
+-   [FTVLaunchX Bitcoin Address](https://blockchain.com/btc/address/1BcFNaen3nAPKyGmKG7cbEJWut2siijJPJ)
 
 You can also help me out by downloading & using the Brave browser or,
 when you are already using Brave, by tipping me some BAT directly at my
