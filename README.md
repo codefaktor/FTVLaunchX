@@ -206,7 +206,7 @@ from a mobile phone running Android or a desktop PC.
     -   For devices running Fire OS 5 (e.g. Fire TV Stick 2nd Generation)
     ```
     adb install FTVLaunchX-x.y.z.apk
-    adb pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
+    adb shell pm grant de.codefaktor.ftvlaunchx android.permission.WRITE_SECURE_SETTINGS
     ```
     -   For devices running Fire OS 6 (e.g. Fire TV Stick 4K)
     ```
