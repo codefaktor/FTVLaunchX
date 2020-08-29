@@ -21,6 +21,8 @@ So far FTVLaunchX has been tested on:
 -   Fire TV Stick 4K (Fire OS 6.2.6.8, Android 7.1)
 -   Fire TV Cube 2nd Generation (Fire OS 7.2.0.6, Android 9.0)
 -   Nvidia Shield 2017 (Shield Android TV 8.0.1)
+-   Sony XG 9505 TV (Android 9.x)
+-   Toshiba TV Fire TV Edition (Fire OS 6.2.6.9)
 
 Please let me know if you are using it successfully on any other devices.
 
