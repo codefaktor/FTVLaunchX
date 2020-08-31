@@ -15,6 +15,16 @@ It is inspired by the famous
 [LauncherHijack](https://github.com/BaronKiko/LauncherHijack) of @BaronKiko
 and tries to overcome several issues relating to it.
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+**NOTE: due to changes in FireOS 6.2.7.2+ FTVLaunchX is no longer working!**
+
+I am trying to find a fix but I can't promise anything just yet... :-/
+
+Stay tuned at [issue #4](https://github.com/codefaktor/FTVLaunchX/issues/4).
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 So far FTVLaunchX has been tested on:
 
 -   Fire TV Stick 2nd Generation (Fire OS 5.2.7.2, Android 5.1)
